@@ -27,12 +27,12 @@ pipeline {
             //app = docker.build("ncassata/microservices")
             steps {
                 sh "chmod +x -R ${env.WORKSPACE}"
-                sh './jenkins/scripts/build.sh'
+                sh 'bash ./jenkins/scripts/build.sh'
             }
         }
         stage('Deliver') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                sh 'bash ./jenkins/scripts/deliver.sh'
             }
         }
     }
