@@ -24,8 +24,9 @@ pipeline {
         stage('Build image') {
             /* This builds the actual image; synonymous to
             * docker build on the command line */
+            //app = docker.build("ncassata/microservices")
             steps {
-                app = docker.build("ncassata/microservices")
+                sh "docker build . -t ncassata/microservices"
             }
         }
         stage('Deliver') {
