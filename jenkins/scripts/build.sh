@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build ../../ -t ncassata/microservices
+/bin/docker build ../../ -t ncassata/microservices
