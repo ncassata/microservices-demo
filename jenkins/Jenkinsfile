@@ -21,6 +21,12 @@ pipeline {
         //         }
         //     }
         // }
+        stage('Build image') {
+            /* This builds the actual image; synonymous to
+            * docker build on the command line */
+
+            app = docker.build("ncassata/microservices")
+        }
         stage('Deliver') {
             steps {
                 sh "chmod +x -R ${env.WORKSPACE}"
